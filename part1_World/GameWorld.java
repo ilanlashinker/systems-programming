@@ -1,6 +1,6 @@
 // Name: Ilan Lashinker - ID: 324946839 || Name: Darii Sandalov - ID: 345975858
 
-package part1_OOP;
+package part1_World;
 
 public class GameWorld {
 	private String name;
