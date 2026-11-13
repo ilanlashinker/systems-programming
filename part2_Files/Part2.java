@@ -12,8 +12,8 @@ public class Part2 {
 
     public static void main(String[] args) {
         try {
-            Scanner sc1 = new Scanner(new File("CS.txt"));
-            Scanner sc2 = new Scanner(new File("hedva.txt"));
+            Scanner sc1 = new Scanner(new File("part2_Files/CS.txt"));
+            Scanner sc2 = new Scanner(new File("part2_Files/hedva.txt"));
 
             String firstName = sc1.next();
             String lastName = sc1.next();
@@ -23,7 +23,7 @@ public class Part2 {
             int hedvaFirstGrade = sc2.nextInt();
             int hedvaSecondGrade = sc2.nextInt();
 
-            PrintWriter writer = new PrintWriter(new File("report.txt"));
+            PrintWriter writer = new PrintWriter(new File("part2_Files/report.txt"));
 
             boolean hasMorecs = true;
             boolean hasMorehedva = true;
