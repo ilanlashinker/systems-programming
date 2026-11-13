@@ -1,5 +1,7 @@
 // Name: Ilan Lashinker - ID: 324946839 || Name: Darii Sandalov - ID: 345975858
 
+package part1_OOP;
+
 public class main {
 	public static void simulateBattle(Player player, Enemy enemy) {
 		System.out.println(
