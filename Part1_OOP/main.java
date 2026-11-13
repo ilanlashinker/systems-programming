@@ -8,42 +8,47 @@ public class main {
 				player.getName() + " level: " + player.getLevel() + " vs " + enemy.getName() + " level: " + enemy.getLevel());
 		if (player.getLevel() > enemy.getLevel()) {
 			player.levelUp();
-			System.out.println(player.getName() + " won the battle.");
+			System.out.println(player.getName() + " wins!");
 		} else if (player.getLevel() < enemy.getLevel()) {
 			enemy.levelUp();
-			System.out.println(enemy.getName() + " won the battle.");
+			System.out.println(enemy.getName() + " wins!");
 		} else {
 			System.out.println("The battle ended in a draw.");
 		}
 	}
 
 	public static void main(String[] args) {
-		Item spellBook = new Item("Spell Book", 25, true);
-		Item iceSword = new Item("Ice Sword", 20, true);
-		Item guardianShield = new Item("Guardian Shield", 15, false);
-		Item ironHelmet = new Item("Iron Helmet", 10, false);
-		Item magicArmor = new Item("Magic Armor", 30, true);
+		Item firstAidKit = new Item("First Aid Kit", 15, false);
+		Item crowbar = new Item("Crowbar", 10, false);
+		Item bodyArmor = new Item("Body Armor", 20, false);
+		Item heavyPistol = new Item("Heavy Pistol", 25, false);
+		Item automaticRifle = new Item("Automatic Rifle", 30, false);
+		Item shotgun = new Item("Shotgun", 35, false);
 
-		Player player1 = new Player("Elara the Enchanter", 10, 4);
-		player1.addItem(spellBook);
-		player1.addItem(magicArmor);
+		Player lucia = new Player("Lucia", 10, 4);
+		lucia.addItem(automaticRifle);
+		lucia.addItem(heavyPistol);
+		lucia.addItem(bodyArmor);
+		lucia.addItem(firstAidKit);
 
-		Player player2 = new Player("Thorin the Brave", 15, 2);
-		player2.addItem(iceSword);
-		player2.addItem(guardianShield);
-		player2.addItem(ironHelmet);
+		Player jason = new Player("Jason", 10, 2);
+		jason.addItem(shotgun);
+		jason.addItem(crowbar);
+		jason.addItem(firstAidKit);
+		jason.addItem(heavyPistol);
+		jason.addItem(bodyArmor);
 
-		Enemy goblin = new Enemy("Goblin", 10, 2, 3);
-		Player[] playersList = new Player[] { player1, player2 };
-		Enemy[] enemiesList = new Enemy[] { goblin };
+		Enemy mendez = new Enemy("Detective Mendez", 10, 2, 3);
+		Player[] playersList = new Player[] { lucia, jason };
+		Enemy[] enemiesList = new Enemy[] { mendez };
 
-		GameWorld world = new GameWorld("Crystalpath", playersList, enemiesList, 2);
+		GameWorld world = new GameWorld("Leonida", playersList, enemiesList, 1);
 		world.printAllPlayers();
 
-		System.out.println(player1.getName() + " total inventory value: " + player1.calculateInventoryValue());
-		System.out.println(player2.getName() + " total inventory value: " + player2.calculateInventoryValue());
+		System.out.println(lucia.getName() + " total inventory value: " + lucia.calculateInventoryValue());
+		System.out.println(jason.getName() + " total inventory value: " + jason.calculateInventoryValue());
 
-		simulateBattle(player1, goblin);
+		simulateBattle(lucia, mendez);
 
 	}
 }
