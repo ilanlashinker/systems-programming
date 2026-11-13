@@ -1,9 +1,12 @@
 // Name: Ilan Lashinker - ID: 324946839 || Name: Darii Sandalov - ID: 345975858
 
+package part2_Files;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
+
 
 public class Part2 {
 
