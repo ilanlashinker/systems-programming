@@ -1,6 +1,6 @@
 // Name: Ilan Lashinker - ID: 324946839 || Name: Darii Sandalov - ID: 345975858
 
-package Part1_OOP;
+package part1_OOP;
 
 public class Player extends Character {
 	private Item[] inventory;
