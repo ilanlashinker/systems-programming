@@ -5,7 +5,7 @@ package part1_OOP;
 public class main {
 	public static void simulateBattle(Player player, Enemy enemy) {
 		System.out.println(
-				player.getName() + " level: " + player.getLevel() + " vs " + enemy.getName() + " level: " + enemy.getLevel());
+				player.getName() + " level : " + player.getLevel() + " VS " + enemy.getName() + " level : " + enemy.getLevel());
 		if (player.getLevel() > enemy.getLevel()) {
 			player.levelUp();
 			System.out.println(player.getName() + " wins!");
