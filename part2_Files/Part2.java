@@ -71,7 +71,7 @@ public class Part2 {
             sc2.close();
 
         } catch (FileNotFoundException e) {
-            System.out.println("קובץ לא נמצא: ");
+            System.out.println("File wasn't found: ");
         }
 
     }
